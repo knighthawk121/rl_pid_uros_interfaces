@@ -19,7 +19,8 @@ find_package(action_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/Tminusp.srv"
   "action/TunePID.action"
-  DEPENDENCIES action_msgs
+  "action/TunePIDmin.action"
+  DEPENDENCIES action_msgs actionlib_msgs std_msgs
 )
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
